@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</h1>
+        <input id="input" />
+        <button id="button" onclick="aaa()">AAAAA</button>
+        <div id="div"></div>
+
+        <script>
+            let button = document.getElementById("button");
+            let div = document.getElementById("div");
+            let input = document.getElementById("input");
+            const hardware = ["RAM", "CPU", "klávesnice"];
+            function aaa() {
+                hardware.push(input.value);
+                div.innerText = "";
+                for (let i = 0; i < hardware.length; i++) {
+                    div.innerText += hardware[i] + "\n";
+                }
+            }
+        </script>
+    </body>
+</html>

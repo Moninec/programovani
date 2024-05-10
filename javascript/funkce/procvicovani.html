@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            function plusminus(n) {
+                if (n > 0) {
+                    console.log("+");
+                }
+                if (n < 0) {
+                    console.log("-");
+                }
+                if (n === 0) {
+                    console.log("nic");
+                }
+            }
+
+            plusminus(0);
+
+            function plusJedna(x) {
+                let vysledek = x + 1;
+                console.log(x, "plus jedna je", vysledek);
+            }
+
+            plusJedna(60);
+
+            function personInfo(name, height, money) {
+                if (height < 150) {
+                    console.log("malý");
+                }
+                if (height > 150) {
+                    console.log("velký");
+                }
+                if (money < 1000) {
+                    console.log("chudý");
+                }
+                if (money > 1000) {
+                    console.log("bohatý");
+                }
+                console.log(name, "je", height, "a", money);
+            }
+            personInfo("Bobek", 120, 2000);
+        </script>
+    </body>
+</html>

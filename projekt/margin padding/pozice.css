@@ -1,0 +1,74 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.red {
+    background-color: red;
+    color: white;
+}
+
+.blue {
+    background-color: royalblue;
+    color: white;
+    display: none;
+    
+
+}
+
+.green {
+    background-color:green;
+    color: white;
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 50px;
+}
+
+.spagety {
+    background-color: yellow;
+    display: block;
+    border: 5px solid black;
+    padding: 50px;
+    width: 200px;
+    height: 150px;
+    box-sizing: border-box; 
+    /* very gut */
+}
+
+.kecup {
+    background-color: tomato;
+    display: inline-block;
+    width: 75%;
+}
+
+.slunicko {
+    width: 250px;
+    height: 500px;
+    background-color: yellow;
+    position: relative;
+    /* relative - vychodni pozice */
+    /* kdyz neni relative tele se pohybuji vuci dokumentu :) */
+}
+
+.tele{
+    width: 200px;
+    height: 50px;
+}
+
+.tinkle-winkle{
+    background-color: purple;
+    position: sticky;
+    /* absolute - vsichni ostatni prvek ignoruji a muze se pohybovat kde chce */
+    /* sticky - chova se jako relativni dokud nepohneme strankou */
+    left: 30px;
+    top: 30px;
+} 
+
+.dipshit{
+    background-color: green;
+}
+
+.poo{
+    background-color: red;
+}

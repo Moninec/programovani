@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto:wght@100;400&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("pzza.jpg");
+    background-size: cover;
+    position: relative;
+}
+
+.logo{
+    height: 120px;
+    width: 120px;
+    position: absolute;
+    left: 4%;
+    top: 2%;
+}
+
+.nav {
+    font-size: 1.1em;
+    text-align: center;
+    width: 60vw;
+    position: absolute;
+    left: 10%;
+}
+
+.nav li {
+    display: inline-block;  
+    text-decoration: none;
+    padding: 0 5%;
+    font-weight: bold;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* vh-view height vyska, vw-view width sirka okna */
+
+
+.main-header {
+    font-size: 4.5em;
+    color: white;
+    position: absolute;
+    text-align: center;
+    left: 8%;
+    bottom: 35%;
+    text-shadow: 0 0 10px black;
+}
+
+.subheading{
+    color: white;
+    position: absolute;
+    bottom: 8%;
+    left: 8%;
+    
+}
+
+.subheading a{
+    text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    padding: 10px;
+    margin: 10px;
+}
+
+section{
+    margin: 10vh 25vw;
+}
+
+section p{
+    text-align: justify;
+}
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>array</title>
+    </head>
+    <body>
+        <input id="input" />
+        <button id="button">Přidej</button>
+        <div></div>
+
+        <script>
+            let button = document.getElementById("button");
+            let input = document.getElementById("input");
+            let div = document.getElementById("div");
+            textInputu = input.value;
+            const digimoni = ["Ranamon", "Piedmon", "Ravemon"];
+            digimoni.push("Puppetmon", "Monmon", "Meowmon");
+            digimoni.pop(); //pop odebírá poslední hodnotu z arraye
+            digimoni.shift(); //shift odebírá první hodnotu z arraye
+            digimoni.push(input.value);
+            div.innerText = digimoni;
+
+            digimoni.splice(3, 1); //od jakého indexu, kolik hodnot chcete odebrat
+            for (let i = 0; i < digimoni.length; i++) {
+                console.log(digimoni[i]);
+            }
+        </script>
+    </body>
+</html>

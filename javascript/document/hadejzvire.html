@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h1 id="nadpis">Jaké je tvoje obliené zvířátko?</h1>
+    <input type = "text" id="input">
+    <button id="tlacitko">jj</button>
+    <div id="div"></div>
+
+    <script>
+
+        let tlacitko = document.getElementById("tlacitko");
+        let nadpis = document.getElementById("nadpis");
+        let input = document.getElementById("input");
+        let div = document.getElementById("div");
+
+        tlacitko.addEventListener("click", zmenNadpis);
+
+
+        function zmenNadpis(){
+            let textInputu = input.value;
+            if (textInputu === "kočka"){
+                div.innerText = "Čiči :)";
+                document.body.style.background = "pink";
+            } else if (textInputu === "kachna"){
+                div.innerText = "Kachničky jsou cute";
+                document.body.style.background = "yellow";
+            } else if (textInputu === "krokodýl"){
+                div.innerText = "krokouš";
+                document.body.style.background = "green";
+            } else {
+                div.innerText = "neznam sori";
+                document.body.style.background = "white";
+
+            }
+
+        }
+
+    </script>
+</body>
+</html>

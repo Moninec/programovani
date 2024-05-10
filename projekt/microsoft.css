@@ -1,0 +1,35 @@
+.logo {
+    margin: 300px 0px 0px 300px;
+    
+}
+.cervena {
+    display: inline-block;
+    background-color: red;
+    color:red;
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+    
+}
+
+.zelena{
+    display: inline-block;
+    background-color: green;
+    color:green;
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+    
+}
+
+.modra {
+    display: inline-block;
+    background-color: blue;
+    color: blue;
+    height: 300px;
+    width: 300px;
+    margin: 10px;
+    
+    
+}
+

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title> 
+    <script src="https://api.mapy.cz/loader.js"></script>
+	<script>Loader.load()</script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header> 
+        <img src="logo.png" class="logo" alt="logo">
+        <nav class="nav"> 
+            <ul>
+                <li><a href="#about-us">O NÁS</a></li>
+                <li><a href="#menu">MENU</a></li>
+                <li><a href="#contacts">KONTAKTY</a></li>
+            </ul>
+        </nav>
+        <h1 class="main-header">Julinky <br> Pizza</h1>
+        <div class="subheading">
+         <h2>Nejlepší pizza pod Třebešínem</h2>
+         <a href="">Objednej rozvoz</a>
+         <a href="">Menu</a>
+        </div>
+    </header>
+<footer>
+    <div id="mapa" style="width:600px; height:400px; margin-left: 400px;"></div>
+	<script type="text/javascript">
+		var stred = SMap.Coords.fromWGS84(14.4099575, 50.0829742);
+		var mapa = new SMap(JAK.gel("mapa"), stred, 10);
+		mapa.addDefaultLayer(SMap.DEF_BASE).enable();
+		mapa.addDefaultControls();	      	      
+	</script>
+</footer>
+
+
+    <section class="section-about-us">
+        <h2 id="about-us" class="section-header">O nás</h2>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis iste numquam odio in dolores adipisci fuga architecto natus sed impedit ipsam odit eius rerum, perspiciatis voluptatem ipsa omnis at harum quam, quasi nesciunt esse eum! Nam a rerum esse? Sed eos saepe cum libero? Commodi iure rerum corrupti, eligendi iste tempore magni rem deleniti facere laborum non saepe error vitae at, in ipsum inventore. Ullam repudiandae, omnis odio cumque porro, architecto assumenda, eius tenetur molestias illum accusamus rem alias eligendi dicta aliquam est excepturi. Obcaecati voluptatibus provident eos sapiente. Voluptate, iusto quia? Libero voluptate iusto perferendis nemo, magnam ipsum ipsa?</p>
+    </section>
+
+
+
+</body>
+</html>

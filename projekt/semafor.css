@@ -1,0 +1,36 @@
+.semafor {
+    background-color: black;
+    width: 110px;
+    padding: 5px;
+
+}
+.cervena {
+    background-color: red;
+    color:red;
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    margin-left: 5px;
+}
+
+.oranzova{
+    background-color: orange;
+    color:orange;
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    margin-left: 5px;
+
+    
+}
+
+.zelena {
+    background-color: green;
+    color: green;
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+    margin-left: 5px;
+    
+    
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Hádej nebo cosi</h1>
+        <input id="input" />
+        <button id="button" onclick="hihi()">hmmmm?</button>
+
+        <div id="div"></div>
+        <div id="div2"></div>
+        <img src="šibenica1.png" id="jenda" />
+        <img src="šibenica2.png" id="dva" />
+        <img src="šibenica3.png" id="tri" />
+        <img src="šibenica4.png" id="ctyri" />
+        <img src="šibenica5.png" id="pet" />
+        <img src="šibenica6.png" id="sex" />
+
+        <style>
+            #jenda {
+                display: none;
+            }
+            #dva {
+                display: none;
+            }
+            #tri {
+                display: none;
+            }
+            #ctyri {
+                display: none;
+            }
+            #pet {
+                display: none;
+            }
+            #sex {
+                display: none;
+            }
+        </style>
+
+        <script>
+            let button = document.getElementById("button");
+            let div = document.getElementById("div");
+            let input = document.getElementById("input");
+            let div2 = document.getElementById("div2");
+
+            let obr1 = document.getElementById("jenda");
+            let obr2 = document.getElementById("dva");
+            let obr3 = document.getElementById("tri");
+            let obr4 = document.getElementById("ctyri");
+            let obr5 = document.getElementById("pet");
+            let obr6 = document.getElementById("sex");
+
+            const seznamSlov = [
+                "souhrada",
+                "králová",
+                "bruknerová",
+                "jacečko",
+                "frýbert",
+            ];
+
+            //vybírání náhodnýho slova
+            let slovo =
+                seznamSlov[Math.floor(Math.random() * seznamSlov.length)];
+            console.log(slovo);
+
+            //vytvoříme array odpověď
+            let odpoved = [];
+
+            //doplnění podtržítka místo písmen
+            for (let i = 0; i < slovo.length; i++) {
+                odpoved[i] = "_";
+            }
+
+            //každé písmeno z vybraného slova (momentálně samá podtržítka) vypíše do HTML
+            for (let i = 0; i < odpoved.length; i++) {
+                div.innerText += odpoved[i];
+            }
+            //slovo[2]
+
+            let pokusy = 0;
+            let uhodnuto = false;
+
+            function hihi() {
+                let pismeno = input.value;
+                uhodnuto = false;
+
+                input.value = "";
+
+                //porovnáváme každé písmeno z hádáného slova s písmenem, které tipujem
+                //pokud se rovnají dosadíme do odpovědi
+                for (let i = 0; i < slovo.length; i++) {
+                    if (pismeno === slovo[i]) {
+                        odpoved[i] = pismeno;
+                        uhodnuto = true;
+                    }
+                }
+
+                if (uhodnuto === false) {
+                    pokusy++;
+                    div2.innerText = pokusy;
+                    if (pokusy === 1) {
+                        obr1.style.display = "block";
+                    }
+                    if (pokusy === 2) {
+                        obr2.style.display = "block";
+                        obr1.style.display = "none";
+                    }
+                    if (pokusy === 3) {
+                        obr3.style.display = "block";
+                        obr2.style.display = "none";
+                    }
+                    if (pokusy === 4) {
+                        obr4.style.display = "block";
+                        obr3.style.display = "none";
+                    }
+                    if (pokusy === 5) {
+                        obr5.style.display = "block";
+                        obr4.style.display = "none";
+                    }
+                    if (pokusy === 6) {
+                        obr6.style.display = "block";
+                        obr5.style.display = "none";
+                    }
+                }
+
+                /*if (slovo[i] === -1) {
+                    pokusy++;
+                }*/
+                //div2.innerText = pokusy;
+                //pokusy++;
+
+                div.innerText = "";
+                //každé písmeno z odpovědi vypíše do HTML
+                for (let i = 0; i < slovo.length; i++) {
+                    div.innerText += odpoved[i];
+                }
+            }
+        </script>
+    </body>
+</html>

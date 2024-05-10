@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>1. Slovní Popelka</h1>
+    <h2>Zadej slovo:</h2>
+    <input id="input" />
+    <button id="buttonI" onclick="hihi()" >přidat</button> 
+    <h2>Seznam slov:</h2>
+    <div id="divI"></div>
+    <button id="buttonII" onclick="hehe()">Popelko!</button>
+    <h2>Krátká slova:</h2>
+    <div id="divII"></div>
+    <h2>Dlouhá slova:</h2>
+    <div id="divIII"></div>
+
+
+    <h1>2. Hodnocení</h1>
+    <h2>Jak moc tě bavil úkol (ani moc ne)</h2>
+    <input id="inputI" />
+    <button id="buttonIII" onclick="srdicka()">pomoc</button>
+    <div id="srdicka"></div>
+
+    <script>
+        let input = document.getElementById("input");
+        let buttonI = document.getElementById("buttonI");
+        let divI = document.getElementById("divI");
+        let buttonII = document.getElementById("buttonII");
+        let divII = document.getElementById("divII");
+        let divIII = document.getElementById("divIII");
+        let buttonIII = document.getElementById("buttonIII");
+        let srdickatxt = document.getElementById("srdicka");
+
+        const odpoved = [];
+        
+
+        function hihi() {
+                
+                odpoved.push(input.value);
+                divI.innerText = "";
+                for (let i = 0; i < odpoved.length; i++) {
+                    divI.innerText += odpoved[i] + ", ";
+                }
+            }
+        
+            /*slovo[i]
+            if i < 3 
+            for (let i = 0; i < 3; i++) {
+
+            }*/
+
+            function hehe() {
+                
+                let slovo = input.value;
+
+                console.log(slovo);
+                if (slovo.length === 0){
+                    divII.innerText = slovo;
+                } if (slovo.length === 1){
+                    console.log(slovo);
+                    divII.innerText = slovo; }
+                } if (slovo.length === 2){
+                    divII.innerText = slovo; }
+
+
+            function srdicka() {
+                let cislo = input.value;
+                let srdicko = "❤️";
+                let srdicka = srdicko.repeat(cislo);
+                srdickatxt.innerText = srdicka;
+                
+
+            }
+            
+            //meow meow meow meow
+            
+            
+              
+        
+    </script>
+</body>
+</html>

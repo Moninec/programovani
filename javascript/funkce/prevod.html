@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <input id="inputI" />
+        <input id="inputII" />
+        <button onclick="svejk()" id="tlacitko">Převeď</button>
+        <div id="div"></div>
+
+        <script>
+            let inputI = document.getElementById("inputI");
+            let inputII = document.getElementById("inputII");
+
+            function svejk() {
+                let textInputuI = inputI.value;
+                let textInputuII = inputII.value;
+                let div = document.getElementById("div");
+                if (textInputuI === "C") {
+                    let vysledek = (5 * (+textInputuII - 32)) / 9;
+                    div.innerText = vysledek;
+                }
+                if (textInputuI === "F") {
+                    vysledek = +textInputuII * (9 / 5) + 32;
+                    div.innerText = vysledek;
+                }
+            }
+        </script>
+    </body>
+</html>

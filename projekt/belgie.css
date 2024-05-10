@@ -1,0 +1,30 @@
+.vlajka {
+    margin: 300px 0px 0px 300px;
+    display: flex;
+}
+.cerna {
+    display: inline-block;
+    background-color: black;
+    color:black;
+    width: 300px;
+    height: 500px;
+    
+}
+
+.cervena{
+    display: inline-block;
+    background-color: red;
+    color:red;
+    width: 300px;
+    height: 500px;
+    
+}
+
+.zluta {
+    display: inline-block;
+    background-color: yellow;
+    color: yellow;
+    width: 300px;
+    height: 500px;
+    
+}

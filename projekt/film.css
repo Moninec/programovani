@@ -1,0 +1,34 @@
+body {
+    background-color: plum;
+}
+
+
+
+.images {
+    width: 150px;
+    height: auto;
+    border: 5px solid blue;
+    border-radius: 5%;
+    
+}
+
+.headings {
+    color: chartreuse;
+}
+
+li {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:cyan
+}
+
+.buttons {
+    background-color: pink;
+    color: deeppink;
+    border-color: maroon;
+}
+
+#comment-input {
+    height: 150px;
+    width: 300px;
+    resize:none
+}
