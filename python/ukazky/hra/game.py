@@ -108,6 +108,10 @@ while True:
         screen.blit(text, (1100, 10))
 
 
+        text2 = font.render(f"Score: {player.sprite.score} ", False, "#000000")
+        screen.blit(text2, (1187, 10))
+
+
         # pohyb monstra
         # if monster_rect.x <= 0:
         #     monster_direction = "Right"
@@ -151,6 +155,15 @@ while True:
 
         if player.sprite.lives == 0:
             game_over = True
+
+        if player.sprite.score >= 19:
+            screen.fill((0, 0, 0))
+            win = font2.render(f"YOU WIN!", False, "#FFFFFF")
+            screen.blit(win, (480, 340))
+
+        if event.key == pygame.K_r and not player.alive():
+                main()
+            
 
     else:
         screen.fill((0, 0, 0))
