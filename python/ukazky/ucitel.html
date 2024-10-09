@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jan Souhrada</title>
+</head>
+<body>
+    <h1>Ahojky</h1>
+    <input type="text" id="input" />
+    <button id="button">Meow</button>
+    <div id="grade"></div>
+    <div id="prumer"></div>
+    <img src="muminek.jpg" id="muminek"/>
+
+    <script>
+        let button = document.getElementById("button");
+        let input = document.getElementById("input");
+        let grade = document.getElementById("grade");
+        let prumer = document.getElementById("prumer");
+        let muminek = document.getElementById("muminek");
+        let znamky = [1, 2, 3, 4, 5];
+        let znamkyDva = [1, 1, 2, 3, 4]
+
+        muminek.style.display = "none";
+
+
+        let sum = 0;
+        let count = 0;
+        
+        let random_znamka;
+
+        function znamka() {
+                if (input.value === "Monika"){
+                    const random = Math.floor(Math.random() * znamky.length);
+                    // const random_znamka = random_znamka(znamky)
+                    random_znamka = znamkyDva[random];
+                }else{
+                    const random = Math.floor(Math.random() * znamky.length);
+                    random_znamka = znamky[random];
+                }
+            
+                grade.innerText = random_znamka;
+
+                sum += random_znamka;
+                count++
+
+                let aver = sum / count;
+                prumer.innerText = aver;
+                
+                if (aver >= 4){
+                    prumer.style.color = "red";
+                }else if(aver <= 1){
+                    muminek.style.display = "block";
+                }
+                else{
+                    prumer.style.color = "black";
+                    muminek.style.display = "none";
+                }
+            }
+
+            button.addEventListener("click", znamka);
+            
+
+    </script>
+</body>
+</html>
