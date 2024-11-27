@@ -45,11 +45,27 @@ def form():
         message = request.form.get("message")
         grade = random.randint(1,5)
 
+        if len(input_class) > 3:
+            input_class = "error"
+
+        if len(input_class) > 3:
+            print("error")
+
+        
+
+        if " " in name:
+            name = name.title()
+        else:
+            name = "error"
+
         cursor = get_db().cursor()
         cursor.execute(
             f"INSERT INTO students (student_name, class, student_message, grade) VALUES (?, ?, ?, ?)", (name, input_class, message, grade)
         )
+
         get_db().commit()
+
+
 
         # if name and message and input_class:
         #     return redirect(url_for("result", name=name, form_class=input_class, message=message))
@@ -61,6 +77,7 @@ def result():
     cursor = get_db().cursor()
     cursor.execute("SELECT * FROM students")
     rows = cursor.fetchall()
+    
     # name = request.args.get("name", default="_____")
     # input_class = request.args.get("form_class", default="_____")
     # message = request.args.get("message", default="_____")
