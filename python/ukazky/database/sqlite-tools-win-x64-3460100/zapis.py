@@ -10,6 +10,15 @@ cursor.execute(
     "INSERT INTO houses (color) VALUES ('blue');"
 )
 
+
+cursor.execute(
+    """CREATE TABLE
+    ...
+    ...
+    ..."""
+)
+
+
 conn.commit()
 
 # uzavření spojení s databází

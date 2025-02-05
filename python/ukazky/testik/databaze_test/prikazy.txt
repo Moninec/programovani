@@ -1,0 +1,19 @@
+Tabulka living_arrangement (ubytování), která obsahuje foreign key, které odkazují na primary key z tabulek my_little_pony a houses
+
+CREATE TABLE living_arrangements(
+la_id INTEGER PRIMARY KEY, 
+pony_id INTEGER, 
+house_id INTEGER, 
+FOREIGN KEY (pony_id) REFERENCES my_little_pony(pony_id), 
+FOREIGN KEY (house_id) REFERENCES houses(house_id)
+);
+
+
+
+Vytvořte příkaz, který vypíše k living_arrangement jméno poníka a barvu domu. Tzn místo 2 1 vypíše Pinkie pie pink
+
+SELECT p.name, h.color 
+FROM living_arrangements l 
+JOIN my_little_pony p ON l.pony_id = p.pony_id 
+JOIN houses h ON l.house_id = h.house_id
+ORDER BY p.name, h.color

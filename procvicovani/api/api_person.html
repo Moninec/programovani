@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p class="output"></p>
+    <img src="" class="flag">
+
+    <script>
+        const out = document.querySelector(".output")
+        const flag = document.querySelector(".flag")
+
+        async function fetchData(url){
+            try{
+                const response = await fetch(url)
+
+                if(!response.ok){
+                    throw new Error()
+                }
+
+                return await response.json()
+            } catch (error){
+                console.error("Not working :(", error)
+            }
+        }
+
+        async function displayPerson(){
+            
+            const name = await fetchData("https://randomuser.me/api/")
+            if (name){
+                out.innerText = name["results"][0]["name"]["first"] + " " + name["results"][0]["name"]["last"]
+                let country = name["results"][0]["location"]["country"]
+                const flagData = await fetchData(`https://restcountries.com/v3.1/name/${country}`)
+
+                if (flagData){
+                    flag.src = flagData[0]["flags"]["png"]
+                    
+                }
+                
+            }
+        }
+
+        // async function displayFlag(){
+        //     const country = await fetchData(`https://restcountries.com/v3.1/name/${}`)
+        
+            console.log(flag.src)
+        // }
+        displayPerson()
+        // console.log(country)
+    </script>
+</body>
+</html>

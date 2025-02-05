@@ -1,0 +1,1 @@
+page.click('div[id="yui_3_18_1_1_1738142954209_157"]:nth-child(1)')
