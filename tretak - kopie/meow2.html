@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="prazdniny">
+      <h1 id="nadpis">Prázdniny yay</h1>
+      <img src="cert.png" id="tlacitko" onclick="certik()" />
+      <div id="zprava">neco neco bla bla bla</div>
+      <img src="free.jpg" id="obrazek" />
+    </div>
+
+    <div id="skola">
+      <h1 id="nadpis2">Škola neeeee</h1>
+      <img src="slunicko.png" id="tlacitko2" onclick="slunicko()" />
+      <div id="zprava2">fuj fuj fuj fujky fuj (ale souhrada se dá)</div>
+      <img src="trebesin.jpg" id="obrazek2" />
+    </div>
+
+    <style>
+      body {
+        text-align: center;
+      }
+
+      #tlacitko {
+        position: absolute;
+        right: 100px;
+        width: 100px;
+        top: 60px;
+      }
+
+      #tlacitko2 {
+        position: absolute;
+        right: 100px;
+        width: 100px;
+        top: 60px;
+      }
+
+      #obrazek2 {
+        width: 800px;
+      }
+    </style>
+
+    <script>
+      document.getElementById("skola").hidden = true;
+
+      function certik() {
+        document.getElementById("skola").hidden = false;
+        document.getElementById("prazdniny").hidden = true;
+      }
+
+      function slunicko() {
+        document.getElementById("skola").hidden = true;
+        document.getElementById("prazdniny").hidden = false;
+      }
+
+      // prazdniny.style.display = none;
+      // skola.style.display = block;
+    </script>
+  </body>
+</html>

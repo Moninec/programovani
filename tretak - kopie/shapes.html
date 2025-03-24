@@ -1,0 +1,119 @@
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+    <style>
+      body {
+        font-family: monospace;
+        font-size: 32px;
+      }
+
+      h1 {
+        font-size: 35px;
+      }
+      .tlacitko {
+        padding: 10px;
+        font-size: 20px;
+        margin: 10px;
+      }
+
+      .platno {
+        border: 2px solid black;
+        width: 800px;
+        height: 500px;
+      }
+
+      .ctverec {
+        border: 2px solid black;
+        background-color: blueviolet;
+        width: 80px;
+        height: 80px;
+        display: inline-block;
+      }
+
+      .kolecko {
+        border-radius: 50%;
+        background-color: blue;
+        width: 80px;
+        height: 80px;
+        display: inline-block;
+      }
+
+      .text-box {
+        display: inline-block;
+      }
+
+      .obrazek {
+        width: 50px;
+        position: absolute;
+        right: 150px;
+        top: 20px;
+      }
+
+      #wrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="wrapper">
+      <h1>Picasso</h1>
+      <div class="platno"></div>
+      <button id="tlacitkoText" class="tlacitko" onclick="kresliText()">
+        Text
+      </button>
+      <button id="tlacitkoKolecka" class="tlacitko" onclick="kresliKolecko()">
+        Kolečka
+      </button>
+      <button id="tlacitkoCtverce" class="tlacitko" onclick="kresliCtverec()">
+        Čtverečky
+      </button>
+      <div id="seznam"></div>
+    </div>
+    <img class="obrazek" src="hide.png" alt="" onclick="schovat()" />
+
+    <script>
+      const platno = document.querySelector(".platno");
+      const tlacitkoCtverce = document.querySelector("#tlacitkoCtverce");
+      const tlacitkoKolecka = document.querySelector("#tlacitkoKolecka");
+      const tlacitkoText = document.querySelector("#tlacitkoText");
+      const obrazek = document.querySelector(".obrazek");
+      const wrapper = document.getElementById("wrappper");
+      let body = document.querySelector("body");
+
+      const seznam = document.getElementById("seznam");
+
+      function kresliCtverec() {
+        for (let i = 0; i < 5; i++) {
+          let ctverec = document.createElement("div");
+          ctverec.classList.add("ctverec");
+          platno.appendChild(ctverec);
+        }
+      }
+
+      function kresliKolecko() {
+        for (let i = 0; i < 5; i++) {
+          let kolecko = document.createElement("div");
+          kolecko.classList.add("kolecko");
+          platno.appendChild(kolecko);
+        }
+      }
+
+      function kresliText() {
+        for (let i = 0; i < 5; i++) {
+          let slovo = document.createElement("div");
+          slovo.classList.add("text-box");
+          slovo.innerText = "Meow";
+          platno.appendChild(slovo);
+        }
+      }
+
+      function schovat() {
+        body.style.display = "none";
+      }
+    </script>
+  </body>
+</html>

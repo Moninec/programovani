@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hop Hop</title>
+    <style>
+      .wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .koule {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: solid 2px;
+        display: inline-block;
+        margin: 10px;
+        animation: hopsani 1s ease-out infinite alternate;
+      }
+      .cara {
+        width: 100vh;
+        /* height: 2px; */
+        border-bottom: solid 2px;
+        position: absolute;
+        bottom: 55px;
+      }
+
+      .jenda {
+        background-color: blueviolet;
+        animation-delay: 2s;
+      }
+      .dva {
+        background-color: yellow;
+        animation-delay: 1.5s;
+      }
+      .tri {
+        background-color: greenyellow;
+        animation-delay: 0.5s;
+      }
+      .ctyri {
+        background-color: orange;
+        animation-delay: 1.2s;
+      }
+      .pet {
+        background-color: pink;
+        animation-delay: 0.3s;
+      }
+
+      @keyframes hopsani {
+        100% {
+          translate: 0px 700px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="koule jenda"></div>
+      <div class="koule dva"></div>
+      <div class="koule tri"></div>
+      <div class="koule ctyri"></div>
+      <div class="koule pet"></div>
+      <div class="cara"></div>
+    </div>
+  </body>
+</html>

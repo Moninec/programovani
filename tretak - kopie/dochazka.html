@@ -1,0 +1,35 @@
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prezenčka</title>
+    <style>
+      html {
+        font-family: monospace;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Kolik kamenů je přítomno?</h1>
+    <input type="text" id="input" />
+    <button id="button" onclick="dochazka()">Hmmmmm?</button>
+    <div>Prezenčka:</div>
+    <ul id="seznam"></ul>
+
+    <script>
+      function dochazka() {
+        const seznam = document.getElementById("seznam");
+        let input = document.getElementById("input");
+        let textInputu = parseInt(input.value);
+        seznam.innerText = "";
+
+        for (let i = 1; i <= textInputu; i++) {
+          let odrazka = document.createElement("li");
+          odrazka.innerText = "Kámen";
+          seznam.appendChild(odrazka);
+        }
+      }
+    </script>
+  </body>
+</html>

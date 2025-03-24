@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="velkydiv">
+      <h1 id="nadpis">Lorem ipsum</h1>
+      <img id="lucifer" src="lucifer.png" onclick="hide()" />
+      <div id="povidani">
+        Fusce consectetuer risus a nunc. Duis condimentum augue id magna semper
+        rutrum. Curabitur bibendum justo non orci. Temporibus autem quibusdam et
+        aut officiis debitis aut rerum necessitatibus saepe eveniet ut et
+        voluptates repudiandae sint et molestiae non recusandae. Nullam dapibus
+        fermentum ipsum. Aenean fermentum risus id tortor. Etiam neque. Et harum
+        quidem rerum facilis est et expedita distinctio. Etiam egestas wisi a
+        erat. Donec vitae arcu. Integer vulputate sem a nibh rutrum consequat.
+        In laoreet, magna id viverra tincidunt, sem odio bibendum justo, vel
+        imperdiet sapien wisi sed libero. Etiam dictum tincidunt diam. Ut enim
+        ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat. Fusce tellus. Suspendisse sagittis
+        ultrices augue. Duis bibendum, lectus ut viverra rhoncus, dolor nunc
+        faucibus libero, eget facilisis enim ipsum id lacus. Etiam ligula pede,
+        sagittis quis, interdum ultricies, scelerisque eu.
+      </div>
+      <img id="obrazek" src="bart.png" /><br />
+    </div>
+
+    <div id="velkydivdva">
+      <h1 id="nadpisdva">co ja vim</h1>
+      <img id="slunicko" src="Slunicko.png" onclick="show()" />
+      <div id="povidanidva">meeeeeeeeeeeoooooooooooooooooooooooow</div>
+      <img id="obrazekdva" src="Trebesin.jpg" />
+    </div>
+
+    <!-- <div id="povidanidva">meooooooooow</div> -->
+
+    <!-- <img id="obrazek" src="bart.png" /><br /> -->
+
+    <!-- <button onclick="jan()" id="tlacitko"> -->
+    <!-- <img id="tlacitkoobr" src="lucifer.png" alt="" /> -->
+    <!-- </button> -->
+
+    <!-- <img id="trebesin" src="Trebesin_foto_2.jpg" /> -->
+
+    <!-- <img id="lucifer" src="lucifer.png" onclick="jan()" /> -->
+
+    <style>
+      body {
+        text-align: center;
+      }
+
+      #nadpis {
+        color: blueviolet;
+      }
+
+      #text {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+
+      #trebesin {
+        position: absolute;
+        display: none;
+      }
+
+      #lucifer {
+        position: absolute;
+        text-align: right;
+        right: 430px;
+        width: 100px;
+      }
+
+      #slunicko {
+        position: absolute;
+        text-align: right;
+        right: 430px;
+        width: 100px;
+      }
+    </style>
+
+    <script>
+      let tlacitko = document.getElementById("tlacitko");
+      let nadpis = document.getElementById("nadpis");
+      let tlacitkoII = document.getElementById("tlacitkoII");
+      let trebesin = document.getElementById("trebesin");
+      let obrazek = document.getElementsByClassName("obrazek");
+      let povidani = document.getElementById("povidani");
+      let tlacitkoobr = document.getElementById("tlacitkoobr");
+      let slunicko = document.getElementById("slunicko");
+
+      function hide() {
+        document.getElementById("velkydiv").hidden = true;
+      }
+      function show() {
+        document.getElementById("velkydivdva").hidden = false;
+      }
+
+      function jan() {
+        nadpis.innerText = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA";
+        povidani.innerText =
+          "meoooooooooooooooooooooooooooooooooooooooooooooooow";
+        lucifer.src = "Slunicko.png";
+        obrazek.src = "Trebesin.jpg";
+      }
+    </script>
+  </body>
+</html>

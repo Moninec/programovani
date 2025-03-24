@@ -1,0 +1,69 @@
+<html lang="cs">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dark mode web</title>
+    </head>
+    <body>
+        <div id="meow">
+            <h1 id="nadpis">Nadpis</h1>
+            <p id="paragraf">paragraf</p>
+            <button id="button">nic nedelam</button>
+            <img src="full-moon.png" id="mesic" onclick="darkmode()">
+            
+            <link rel="stylesheet"
+                 href="https://fonts.googleapis.com/css?family=Lato">
+
+            <link rel="stylesheet"
+                 href="https://fonts.googleapis.com/css?family=Gabarito">
+        </div>
+        
+    </body>
+</html>
+
+<style>
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    #nadpis{
+      font-family: "Gabarito", serif;
+      color: #845EC2;
+    }
+
+    #paragraf{
+      font-family: "Lato", serif;
+      
+    }
+
+    #button{
+      font-family: "Lato", serif;
+      background-color:#4B4453 ;
+      color:#B0A8B9;
+    }
+
+    #mesic{
+        position: absolute;
+        left: 100px;
+        width: 100px;
+        top: 60px;
+    }
+
+    .darkmode{
+      background-color: #1e1e1e;
+      color: white;
+    }
+</style>
+
+<script>
+    let mesic = document.getElementById("mesic");
+    let body = document.body;
+
+    function darkmode(){
+      body.classList.toggle("darkmode");
+
+    }
+</script>
