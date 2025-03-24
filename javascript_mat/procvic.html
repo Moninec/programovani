@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            color: salmon;
+            transform: translate(100px);
+        }
+
+        h2{
+            color: hotpink;
+            transform: rotate(90deg);
+            border: 2px solid blue;
+        }
+
+        .nadpisy{
+            color: indigo;
+        }
+
+        .podnadpisy{
+            color: lightcoral;
+        }
+
+        #podnadpis{
+            color: darkmagenta;
+        }
+
+        span{
+
+        }
+    </style>
+
+</head>
+<body>
+    <h1 style="color: blueviolet;">Dobrý den</h1>
+    <h2 class="podnadpisy nadpisy" id="podnadpis">Nashledanou</h2>
+    <h3 class="mensi-podnadpis">Dobrý večer</h3>
+    <input class="options" name="options" type="radio">Možnost 1
+    <input class="options" name="options" type="radio">Možnost 2
+    <input class="options" name="options" type="radio">Možnost 3
+    <!-- name - propojuje inputy mezi sebou (obecně propojuje), classa nn -->
+     <span>blablabla</span>
+    
+
+    <script>
+        console.log("Hello")
+
+        let h3 = document.querySelector(".mensi-podnadpis")
+        h3.style.color = "deepskyblue"
+    </script>
+</body>
+</html>
