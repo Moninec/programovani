@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" class="text">
+    <button class="button">Zavřeno</button> <br>
+    <button class="smoula">Zešmouluju</button>
+
+    <script>
+        input = document.querySelector(".text")
+        button = document.querySelector(".button")
+        smoula = document.querySelector(".smoula")
+
+        button.addEventListener("click", homo)
+
+        function homo(){
+            if (input.value === "alohomora"){
+                button.innerText = "Otevřeno"
+            }
+        }
+
+
+        smoula.addEventListener("click", smoulovani)
+
+        function smoulovani(){
+            smoula.style.color = "white"
+            smoula.style.background = "blue"
+        }
+
+        
+    </script>
+</body>
+</html>
